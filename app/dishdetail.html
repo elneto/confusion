@@ -52,11 +52,11 @@
                   <p>{{com.comment}}</p>
                   <footer>{{com.author}}, <cite>{{com.date | date:'longDate'}}</cite></footer>
                 </blockquote>
-                <!--TODO!-->
-                <!-- <p>Task 3: Here you include the code to show the live preview of the comment</p>
-                <p>The comment should be shown only when the form contains valid
-                information and is not pristine</p> -->
-                <blockquote ng-hide="commentForm.$invalid && commentForm.$pristine">
+                <!-- To make it stay, like in the video, only add the line below to the condition
+                || !commentForm.comentario.$pristine 
+                to be like in the text remove the  or condition
+                !-->
+                <blockquote ng-show="commentForm.$valid && !commentForm.$pristine || !commentForm.comentario.$pristine"> <!--attention to the comment above!-->
                   <p>{{comment.rating}} Stars</p>
                   <p>{{comment.comment}}</p>
                   <footer>{{comment.author}}, <cite>{{comment.date | date:'longDate'}}</cite></footer>
