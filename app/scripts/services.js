@@ -8,6 +8,7 @@ angular.module('confusionApp')
 
 		var dishes=[
                  {
+                  _id:0,
                   name:'Uthapizza',
                   image: 'images/uthapizza.png',
                   category: 'mains',
@@ -47,10 +48,11 @@ angular.module('confusionApp')
                        }                                                          ]
                 },
                 {
+                  _id:1,
                   name:'Zucchipakoda',
-                   image: 'images/zucchipakoda.png',
+                  image: 'images/zucchipakoda.png',
                   category: 'appetizer',
-                   label:'',
+                  label:'',
                   price:'1.99',
                   description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce',
                   comments: [
@@ -86,13 +88,14 @@ angular.module('confusionApp')
                        }                                                          ]
                 },
                 {
+                  _id:2,
                   name:'Vadonut',
-                   image: 'images/vadonut.png',
+                  image: 'images/vadonut.png',
                   category: 'appetizer',
-                   label:'New',
+                  label:'New',
                   price:'1.99',
                   description:'A quintessential ConFusion experience, is it a vada or is it a donut?',
-                   comments: [
+                  comments: [
                        {
                            rating:5,
                            comment:"Imagine all the eatables, living in conFusion!",
@@ -126,13 +129,14 @@ angular.module('confusionApp')
                                                   ]
                 },
                 {
+                  _id:3,
                   name:'ElaiCheese Cake',
-                   image: 'images/elaicheesecake.png',
+                  image: 'images/elaicheesecake.png',
                   category: 'dessert',
-                   label:'',
+                  label:'',
                   price:'2.99',
                   description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
-                   comments: [
+                  comments: [
                        {
                            rating:5,
                            comment:"Imagine all the eatables, living in conFusion!",
