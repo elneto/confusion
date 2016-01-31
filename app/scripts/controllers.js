@@ -123,6 +123,10 @@ angular.module('confusionApp')
             $scope.showDish = false;
             $scope.message = "Loading...";
 
+            $scope.showPromotion = false;
+            $scope.messageProm = "Loading promotion...";
+            
+
             $scope.dish = menuFactory.getDishes().get({id:0})
                 .$promise.then(
                     function(response){
@@ -134,7 +138,18 @@ angular.module('confusionApp')
                     }
                 );
 
-            $scope.promotion = menuFactory.getPromotion(0);
+            //$scope.promotion = menuFactory.getPromotion(0);
+            $scope.promotion = menuFactory.getPromotions().get({id:0})
+                .$promise.then(
+                    function(response){
+                        $scope.promotion = response;
+                        $scope.showPromotion = true;
+                    },
+                    function(response){
+                        $scope.messageProm = "Error: " + response.status + " " + response.statusText;
+                    }
+                );
+                
             $scope.leader = corporateFactory.getLeader(3);
             
         }])
